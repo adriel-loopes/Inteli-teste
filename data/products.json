@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Smart Speaker com IA",
+        "price": 199.99,
+        "description": "Um alto-falante inteligente com assistente virtual integrado.",
+        "image": "/images/speaker.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Câmera de Segurança com IA",
+        "price": 299.99,
+        "description": "Câmera de segurança que aprende e alerta com base em IA.",
+        "image": "/images/camera.jpg"
+    }
+]

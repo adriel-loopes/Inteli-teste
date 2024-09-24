@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Intelihome - Loja de Produtos com IA</title>
+</head>
+<body>
+    <header>
+        <h1>Intelihome</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products" id="cart-link">Produtos</a></li>
+                <li><a href="/cart">Carrinho (<span id="cart-count">0</span>)</a></li>
+                <li><a href="/checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h2>Bem-vindo à Intelihome!</h2>
+        <p>Explore nossos produtos de tecnologia com inteligência artificial.</p>
+    </section>
+
+    <!-- Seção para produtos -->
+    <section id="product-list"></section>
+
+    <!-- Seção para exibir itens no carrinho -->
+    <div id="cart-modal" style="display:none;">
+        <h2>Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Intelihome. Todos os direitos reservados.</p>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "name": "inteli-teste",
+    "version": "1.0.0",
+    "description": "Uma aplicação web para gerenciar produtos eletrônicos com IA.",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "keywords": [
+        "eletrônicos",
+        "inteligência artificial",
+        "e-commerce"
+    ],
+    "author": "Adriel",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "ejs": "^3.1.10",
+        "express": "^4.21.0"
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Carrinho - Intelihome</title>
+</head>
+<body>
+    <header>
+        <h1>Carrinho de Compras</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Produtos</a></li>
+                <li><a href="/cart">Carrinho (<span id="cart-count"><%= cart.length %></span>)</a></li>
+                <li><a href="/checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cart-items">
+        <h2>Itens no Carrinho</h2>
+        <ul>
+            <% cart.forEach(item => { %>
+                <li>
+                    <%= item.name %> - R$<%= item.price.toFixed(2) %>
+                    <form action="/cart/remove" method="POST" style="display:inline;">
+                        <input type="hidden" name="productId" value="<%= item.id %>">
+                        <button type="submit">Remover</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </section>
+
+    <button onclick="window.location.href='/checkout'">Finalizar Compra</button>
+
+    <footer>
+        <p>&copy; 2024 Intelihome. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

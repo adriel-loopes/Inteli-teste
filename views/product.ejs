@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Produtos - Intelihome</title>
+</head>
+<body>
+    <header>
+        <h1>Produtos</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Produtos</a></li>
+                <li><a href="/cart">Carrinho (<span id="cart-count"><%= cartCount %></span>)</a></li>
+                <li><a href="/checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="product-list">
+        <h2>Lista de Produtos</h2>
+        <div class="products-container">
+            <% products.forEach(product => { %>
+                <div class="product-item">
+                    <h3><%= product.name %></h3>
+                    <img src="<%= product.image %>" alt="<%= product.name %>" class="product-image">
+                    <p><%= product.description %></p>
+                    <p>R$<%= product.price.toFixed(2) %></p>
+                    <form action="/cart/add" method="POST">
+                        <input type="hidden" name="productId" value="<%= product.id %>">
+                        <button type="submit">Adicionar ao Carrinho</button>
+                    </form>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Intelihome. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
